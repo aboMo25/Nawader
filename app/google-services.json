@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "299921446719",
+    "project_id": "lastmusicapp-de959",
+    "storage_bucket": "lastmusicapp-de959.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299921446719:android:7866a86db3c0491a25e58a",
+        "android_client_info": {
+          "package_name": "com.example.lastmusicapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS4i_8kPiLMbRdQIdp3H_9zkZ9Q2YGovA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
