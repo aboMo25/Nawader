@@ -7,31 +7,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import com.example.lastmusicapp.adapters.SongListAdapter
-import com.example.lastmusicapp.databinding.ActivityMainBinding
-import com.example.lastmusicapp.databinding.ActivitySongListBinding
-import com.example.lastmusicapp.models.CategoryModel
+import com.example.lastmusicapp.adapters.SubListAdapter
+import com.example.lastmusicapp.databinding.ParentItemBinding
+import com.example.lastmusicapp.models.ParentModel
 
-class SongListActivity : AppCompatActivity() {
+class SongsListActivity : AppCompatActivity() {
+companion object{
+    lateinit var category : ParentModel
+}
+    lateinit var  binding: ParentItemBinding
 
-    companion object{
-        lateinit var category : CategoryModel
-    }
-
-    lateinit var  binding: ActivitySongListBinding
-//    lateinit var mainBinding:ActivityMainBinding
-    lateinit var songsListAdapter: SongListAdapter
+    lateinit var songsListAdapter: SubListAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding= ActivitySongListBinding.inflate(layoutInflater)
+        binding= ParentItemBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//
-//        mainBinding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(mainBinding.root)
 
         binding.nameTextView.text= category.name
-
+        // Get image From firebase
         Glide.with(binding.coverImageView).load(category.coverUrl)
             .apply(
                 RequestOptions().transform(RoundedCorners(32))
@@ -41,9 +34,7 @@ class SongListActivity : AppCompatActivity() {
         setupSongsListRecyclerView()
     }
     fun setupSongsListRecyclerView(){
-        songsListAdapter = SongListAdapter(category.songs)
-//        mainBinding.songsListRecyclerView2.layoutManager = LinearLayoutManager(this)
-//        mainBinding.songsListRecyclerView2.adapter = songsListAdapter
+        songsListAdapter = SubListAdapter(category.songs)
         binding.songsListRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.songsListRecyclerView.adapter = songsListAdapter
     }

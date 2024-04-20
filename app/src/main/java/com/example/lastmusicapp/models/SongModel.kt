@@ -6,5 +6,10 @@ data class SongModel(
     val url : String,
     val coverUrl : String,
 ) {
+
+    object Constants {
+        const val PARENT = 1
+        const val CHILD = 0
+    }
     constructor() : this("","","","","")
 }

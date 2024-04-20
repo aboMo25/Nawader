@@ -38,8 +38,8 @@ android {
         viewBinding=true
     }
 
-
 }
+
 
 
 dependencies {
@@ -59,16 +59,9 @@ dependencies {
 
     // AndroidX ConstraintLayout
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.identity.credential)
     implementation(libs.firebase.firestore)
-
-
-//    // Play Services FIDO (Fast Identity Online)
-//    implementation(libs.play.services.fido)
-//
-//    // Generative AI library (assuming a custom library)
-//    implementation(libs.generativeai)
-//    implementation(libs.firebase.firestore)
-
+    implementation ("com.google.firebase:firebase-firestore")
     // JUnit testing framework
     testImplementation(libs.junit)
 

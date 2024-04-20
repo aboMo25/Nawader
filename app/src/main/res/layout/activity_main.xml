@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blueDark"
+        android:background="@color/green"
         android:padding="16dp"
         android:fitsSystemWindows="true">
 
@@ -56,14 +56,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center"
                 android:text="قائمة الشيوخ"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/categories_item_recycler_view1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categories_item_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/parent_item"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                     />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="wrap_content"
@@ -71,281 +75,11 @@
                     android:id="@+id/dividerr"
                     app:dividerColor="@color/textWhite"
                     android:layout_marginVertical="8dp"/>
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:id="@+id/songs_list_recycler_view2"-->
-<!--                    android:backgroundTint="@color/white"-->
-<!--                    />-->
-
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/section_1_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_1_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                     />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_1_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_1_title" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/mostly_played_main_layout"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/mostly_played_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                     />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/mostly_played_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/mostly_played_title" />-->
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-
-<!--                android:id="@+id/section_2_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_2_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                    />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_2_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_2_title" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/section_3_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_3_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                     />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_3_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_3_title" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/section_4_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_4_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                     />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_4_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_4_title" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/section_5_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_5_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                     />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_5_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_5_title" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/section_6_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_6_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                    />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_6_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_6_title" />-->
-
-<!--            </RelativeLayout>-->
-
-<!--            <View-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="30dp" />-->
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/section_7_main_layout"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="gone">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/section_7_title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="sans-serif-medium"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="20sp"-->
-<!--                     />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="32dp"-->
-<!--                    android:layout_height="32dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:src="@drawable/icon_arrow_right" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/section_7_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/section_7_title" />-->
-
-<!--            </RelativeLayout>-->
 
         </LinearLayout>
     </ScrollView>
 
-
-
-
-        <RelativeLayout
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="6dp"
@@ -370,18 +104,8 @@
                 android:textSize="22sp" />
 
         </RelativeLayout>
-
     </RelativeLayout>
 
-    <!-- NavigationView -->
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:id="@+id/navigation_drawer1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        app:headerLayout="@layout/header"-->
-<!--        app:itemIconTint="@color/white"-->
-<!--        app:itemTextColor="@color/white"-->
-<!--        app:menu="@menu/main_menu" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
